@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../public/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../public/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../public/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../public/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../public/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../public/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../public/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../public/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../public/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../public/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../public/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../public/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../public/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../public/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./public/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>15N | Cronograma</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/header-footer.js"></script>
+    <script src="../js/transition.js"></script>
+    <link rel="stylesheet" href="../scss/dist/cronograma.css" />
+  </head>
+  <body>
+    <div class="transition transition-2 is-active"></div>
+    <div id="header"></div>
+    <section>
+      <div class="container">
+        <div class="top-container">
+          <div class="meses-container">
+            <div>
+              <line class="negro"></line>
+              <h1>Agosto</h1>
+            </div>
+            <div>
+              <line class="morado"></line>
+              <h1>Septiembre</h1>
+            </div>
+            <div>
+              <line class="verde"></line>
+              <h1>Octubre</h1>
+            </div>
+            <div>
+              <line class="rojo"></line>
+              <h1>Noviembre</h1>
+            </div>
+          </div>
+          <div class="page-changer">
+            <i class="fa-solid fa-angle-left flechita"></i>
+            <i class="fa-solid fa-angle-right flechita active"></i>
+          </div>
+        </div>
+
+        <div class="grid-changer">
+          <div class="grid-container">
+            <div class="grid" id="grid">
+              <div class="box1 col negro" data-name="p-1">
+                <h1>27</h1>
+                <p>Lanzamiento Agenda Nacional de Conmemoración del 15N</p>
+              </div>
+              <div class="box2 col morado" data-name="p-2">
+                <h1>02</h1>
+                <p>Encuentro de honor a Mons. Leonidas Proaño</p>
+              </div>
+              <div class="box3 col morado" data-name="p-3">
+                <h2>03 - 12</h2>
+                <p>Caravanas de la Resistencia por comunidades de Guayaquil.</p>
+              </div>
+              <div class="box4 col morado" data-name="p-4">
+                <h2>05 - 29</h2>
+                <p>
+                  Jornadas barriales de Batucadas populares por el 15 de
+                  Noviembre
+                </p>
+              </div>
+              <div class="box5 col morado" data-name="p-5">
+                <h1>09</h1>
+                <p>Homenaje a Salvador Allende</p>
+              </div>
+              <div class="box6 col morado" data-name="p-6">
+                <h1>09</h1>
+                <p>Tribunal Popular por Justicia en Cárceles</p>
+              </div>
+              <div class="box7 col morado" data-name="p-7">
+                <h1>15</h1>
+                <p>Concurso de Oratoria Universitario</p>
+              </div>
+              <div class="box8 col morado" data-name="p-8">
+                <h1>18</h1>
+                <p>
+                  Acto de renombrar la calle Boyacá con el nombre de Esther
+                  Balbina Rivera
+                </p>
+              </div>
+              <div class="box9 col morado" data-name="p-9">
+                <h1>18</h1>
+                <p>Charla sobre el rol de las mujeres en el 15N de 1922</p>
+              </div>
+              <div class="box10 col morado" data-name="p-10">
+                <h1>22</h1>
+                <p>
+                  Proyección de Film: Nosotros, una historia de obreros.
+                  Conversatorio
+                </p>
+              </div>
+              <div class="box11 col morado" data-name="p-11">
+                <h1>22</h1>
+                <p>Representación Teatral 15 Nov. Talleres Arawa</p>
+              </div>
+              <div class="box12 col morado" data-name="p-12">
+                <h1>25</h1>
+                <p>
+                  Proyección de Film: La lluvia meona. Presentación Artística
+                </p>
+              </div>
+              <div class="box13 col morado" data-name="p-13">
+                <h1>28</h1>
+                <p>
+                  Vigilia por las más de 2000 luchadorxs Asesinades el 15 de
+                  Noviembre
+                </p>
+              </div>
+              <div class="box14 col verde" data-name="p-14">
+                <h1>01</h1>
+                <p>Evento por el Habitat y la vivienda digna</p>
+              </div>
+              <div class="box15 col verde" data-name="p-15">
+                <h1>02</h1>
+                <p>
+                  Vigilia, Altar y Memoria por las mujeres luchadoras del frente
+                  aurora de 1922
+                </p>
+              </div>
+            </div>
+            <div class="grid" id="grid2">
+              <div class="box1 col verde" data-name="p-16">
+                <h1>07</h1>
+                <p>
+                  Conversatorio CHE: Tributo a la Memoria de la Resistencia
+                  Latina Mundial
+                </p>
+              </div>
+              <div class="box2 col verde" data-name="p-17">
+                <h1>08</h1>
+                <p>
+                  III Festival “La Resistencia es una Fiesta en Casas
+                  Colectivas”
+                </p>
+              </div>
+              <div class="box3 col verde" data-name="p-18">
+                <h2>X Def.</h2>
+                <p>Concurso de Oratoria Intercolegial</p>
+              </div>
+              <div class="box4 col verde" data-name="p-19">
+                <h2>29 - 13</h2>
+                <p>
+                  Video Foros en Comunidades con Documental “Nosotros Una
+                  Historia de Obreros
+                </p>
+              </div>
+              <div class="box5 col verde" data-name="p-20">
+                <h1>14</h1>
+                <p>
+                  Concurso de lectura del libro "Las Cruces sobre el Agua de
+                  Joaquín G. L." en unidades educativas.
+                </p>
+              </div>
+              <div class="box6 col verde" data-name="p-21">
+                <h1>15</h1>
+                <p>Encuentro por el Día de la Mujer Rural</p>
+              </div>
+              <div class="box7 col verde" data-name="p-22">
+                <h1>18</h1>
+                <p>Evento Cultural por matanza de Aztra</p>
+              </div>
+              <div class="box8 col verde" data-name="p-23">
+                <h1>20</h1>
+                <p>
+                  Foro Virtual “Rol Histórico de la Mujer en la Gran Huelga del
+                  15N de 1922
+                </p>
+              </div>
+              <div class="box9 col verde" data-name="p-24">
+                <h1>21</h1>
+                <p>Proyección y obra de teatro de Aztra</p>
+              </div>
+              <div class="box10 col verde" data-name="p-25">
+                <h1>22</h1>
+                <p>
+                  Aztra de 1977 y octubre del 2019: Huelgas, Terrorismo de
+                  Estado e Impunidad
+                </p>
+              </div>
+              <div class="box11 col rojo" data-name="p-26">
+                <h2>03 y 10</h2>
+                <p>
+                  Dialogo Virtual “Análisis Histórico del 15N Apellidos de la
+                  Represión”
+                </p>
+              </div>
+              <div class="box12 col rojo" data-name="p-27">
+                <h1>15</h1>
+                <p>
+                  Festival cultural. Reconocimiento ORGs. Gremiales históricas
+                  de la gesta del 15N de 1922
+                </p>
+              </div>
+              <div class="box13 col rojo" data-name="p-28">
+                <h1>15</h1>
+                <p>Gran marcha por el centenario del 15 de noviembre de 1922</p>
+              </div>
+              <div class="box15 col rojo" data-name="p-29">
+                <h1>16</h1>
+                <p>
+                  Concentración/ Festival “TOMASA GARCÉS”. Cierre de marcha del
+                  15N, ¡Una gran concentración!
+                </p>
+              </div>
+              <div class="box14 col rojo" data-name="p-30">
+                <h1>16</h1>
+                <p>
+                  Presentación artística y Proyección de Film: La lluvia meona y
+                  la Rebelión de la memoria
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-container">
+          <div class="meses-container">
+            <div>
+              <line class="negro"></line>
+              <h1>Agosto</h1>
+            </div>
+            <div>
+              <line class="morado"></line>
+              <h1>Septiembre</h1>
+            </div>
+            <div>
+              <line class="verde"></line>
+              <h1>Octubre</h1>
+            </div>
+            <div>
+              <line class="rojo"></line>
+              <h1>Noviembre</h1>
+            </div>
+          </div>
+          <div class="page-changer">
+            <i class="fa-solid fa-angle-left flechita bottom-left"></i>
+            <i class="fa-solid fa-angle-right flechita active bottom-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="col-preview">
+      <div class="preview negro" data-target="p-1">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Lanzamiento Agenda Nacional Conmemoración del 15N</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>27-Agosto-2022 - 10h00</p>
+          <h1>Lugar</h1>
+          <p>Casa de la Cultura de Guayaquil</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Coordinadora Nacional 15 de Noviembre <br />
+            Coordinadora de Organizaciones Sociales del Guayas <br />
+            UNP - Guayas
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-2">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Encuentro de honor a Mons. Leonidas Proaño</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>02-Septiembre-2022 - 09h00</p>
+          <h1>Lugar</h1>
+          <p>Unidad Educativa María de Nazareth</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Cebs Iguanas</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-3">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Caravanas de la Resistencia por comunidades de Guayaquil.</h3>
+        <div class="info">
+          <h1>Fecha y Lugar</h1>
+          <p>
+            Isla Trinitaria, Coop. Monseñor Leónidas Proaño, 3 de septiembre
+            17:00<br />
+            Isla Trinitaria, Coop. Valladolid, 9 de septiembre 15:00 <br />
+            Isla Trinitaria, Coop. Madrigal, 10 de septiembre 16:30 <br />
+            Casas Colectivas Gómez Rendón, 17 de septiembre 16:00 <br />
+            Nueva Prosperina, 18 de septiembre 16:00 <br />
+            Duran, 24 de septiembre 10:00 <br />
+            Limonal, 24 de septiembre 17:00 <br />
+            Guasmo Sur, Coop. Batalla de Tarqui, 27 septiembre, 16:00 <br />
+            Socio Vivienda, 12 de octubre 16:00
+          </p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Coordinadora Nacional 15 Noviembre <br />
+            Coordinadora de Organizaciones Sociales del Guayas <br />
+            UNP - Guayas
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-4">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Jornadas barriales de Batucadas populares por el 15 de Noviembre
+        </h3>
+        <div class="info">
+          <h1>Fecha y Lugar</h1>
+          <p>
+            5 de septiembre, Socio Vivienda <br />
+            1 de octubre, Sergio Toral<br />
+            8 de octubre, Casas Colectivas <br />
+            15 de octubre, Bastión Popular<br />
+            22 de octubre, Suburbio <br />
+            29 de octubre, Isla Trinitaria
+          </p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Fundación Terranueva</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-5">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Evento Homenaje a Salvador Allende</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>09-Septiembre-2022 - 17h00</p>
+          <h1>Lugar</h1>
+          <p>Unión Nacional de Periodistas - UNP Guayas</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Frente de Defensa del IESS 15 Noviembre</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-6">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Tribunal Popular por Justicia en Cárceles</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>09-Septiembre-2022 - 09h00</p>
+          <h1>Lugar</h1>
+          <p>Corte Provincial del Guayas</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>CDH-COSG - Comité de Familiares</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-7">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Concurso de Oratoria Universitario</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>15-Septiembre-2022 - 17h00</p>
+          <h1>Lugar</h1>
+          <p>
+            Biblioteca Pino Rubira de la Facultad de Jurisprudencia de la
+            Universidad de Guayaquil
+          </p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Movimiento Juventud Universitaria de Derecho JUD</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-8">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Acto de renombrar la calle Boyacá con el nombre de Esther Balbina
+          Rivera
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>18-Septiembre-2022</p>
+          <h1>Lugar</h1>
+          <p>Calle Boyacá y Av. 9 de Octubre</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Movimiento de Mujeres Diversas en Resistencia de Guayaquil</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-9">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Charla sobre el rol de las mujeres en el 15N de 1922</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>18-Septiembre-2022</p>
+          <h1>Lugar</h1>
+          <p>Comunidades del Noroeste de Guayaquil</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Circulo de mujeres de la coordinadora del noroeste en resistencia a
+            los desalojos por el derecho a la vivienda digna
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-10">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Proyección de Film: Nosotros, una historia de obreros. Conversatorio
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>22-Septiembre-2022 - 16h00</p>
+          <h1>Lugar</h1>
+          <p>Casa de la Cultura. Sala Araceli Gilbert. 1er Piso</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Encae, Arawa, Semillero de Teatro y Zancos del Noroeste,
+            Coordinadora Nacional por el Centenario del 15N de 1922
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-11">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Representación Teatral 15 Nov. Talleres Arawa</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>22-Septiembre-2022 - 19h00</p>
+          <h1>Lugar</h1>
+          <p>Auditorio Facultad de Arquitectura de la UG</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Encae, Arawa, Semillero de Teatro y Zancos del Noroeste,
+            Coordinadora Nacional por el Centenario del 15N de 1922
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-12">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Proyección de Film: La lluvia meona. Presentación Artística</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>25-Septiembre-2022</p>
+          <h1>Lugar</h1>
+          <p>Comunidad del Noroeste de Guayaquil</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Coordinadora del Noroeste en Resistencia a los Desalojos</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-13">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Vigilia por las más de 2000 luchadorxs asesinades el 15 de Noviembre
+          de 1922
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>28-Septiembre-2022</p>
+          <h1>Lugar</h1>
+          <p>
+            Dia que salimos en la marcha por el dia global del aborto, Vigilia
+            al cerrar
+          </p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Movimiento de Mujeres Diversas en Resistencia de Guayaquil</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-14">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Evento por el Habitat y la vivienda Digna</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>01-Octubre-2022</p>
+          <h1>Lugar</h1>
+          <p>Comunidades del Noroeste de Guayaquil</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Coordinadora del Noroeste en Resistencia a los Desalojos, Fundación
+            Habitar Humano, Fundación AIDECO, Semillero de Zancos y Teatro del
+            Noroeste
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview morado" data-target="p-15">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Vigilia, Altar, Pampamesa y memoria por las mujeres luchadoras del
+          frente aurora de 1922
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>02-Octubre-2022</p>
+          <h1>Lugar</h1>
+          <p>Comunidades del Noroeste de Guayaquil</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Coordinadora del Noroeste en Resistencia a los Desalojos, Fundación
+            Habitar Humano, Semillero de Zancos y Teatro del Noroeste
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview verde" data-target="p-16">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Conversatorio. CHE: Tributo a la Memoria de la Resistencia
+          Latinoamericana Mundial
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>07-Octubre-2022 - 10h30</p>
+          <h1>Lugar</h1>
+          <p>Union Nacional de Periodistas - UNP Guayas</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Frente de defensa del IESS 15 de Noviembre del 1922</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview verde" data-target="p-17">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>III Festival “La Resistencia es una Fiesta en Casas Colectivas”</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>08-Octubre-2022</p>
+          <h1>Lugar</h1>
+          <p>Comunidad Casas Colectivas</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Coordinadora Organizaciones Sociales del Guayas</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview verde" data-target="p-18">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Concurso de Oratoria Intercolegial</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>Fecha aún por definir</p>
+          <h1>Lugar</h1>
+          <p>UArtes, Sociedad de Carpinteros Sociedad hijos del Trabajo, UNP</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Sociedad hijos del trabajo Frente de Defensa del IESS 15 noviembre
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview verde" data-target="p-19">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Video Foros en Comunidades con Documental “Nosotros Una Historia de
+          Obreros
+        </h3>
+        <div class="info">
+          <h1>Fecha y Lugar</h1>
+          <p>
+            29 de Septiembre, Socio Vivienda <br />
+            6 de Octubre, Suburbio <br />
+            13 de Octubre, Sergio Toral
+          </p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Coordinadora del Noroeste en Resistencia a los Desalojos</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview verde" data-target="p-20">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Concurso de lectura del libro Las Cruces sobre el Agua de Joaquín
+          Gallegos Lara por centenario del 15N con unidades educativas.
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>14-Octubre-2022</p>
+          <h1>Lugar</h1>
+          <p>Colegio Fe y Alegría de la 40 ava en Suburbio</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Fundación Terranueva</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview verde" data-target="p-21">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Encuentro por el Día de la Mujer Rural</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>15-Octubre-2022</p>
+          <h1>Lugar</h1>
+          <p>Predio Las Mercedes del cantón Durán</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Unión de Organizaciones Campesinas Tierra y Vida</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview verde" data-target="p-22">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Evento Cultural por matanza de Aztra</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>18-Septiembre-2022</p>
+          <h1>Lugar</h1>
+          <p>La Troncal</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Escuelita Popular Guayaquil. Coordinadora Nacional de teatro y
+            Zancos Noroeste
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview verde" data-target="p-23">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Foro Virtual “Rol Histórico de la Mujer en la Gran Huelga del 15N de
+          1922
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>20-Octubre-2022</p>
+          <h1>Lugar</h1>
+          <p>Virtual</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Fundación Terranueva</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview verde" data-target="p-24">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Proyección y obra de teatro de Aztra</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>21-Octubre-2022 - 10h00</p>
+          <h1>Lugar</h1>
+          <p>Unidad Educativa María de Nazareth</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Coordinadora del noroeste en resistencia a los desalojos por el
+            derecho a la vivienda digna, Semillero de teatro y zancos del
+            noroeste
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview verde" data-target="p-25">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Aztra de 1977 y octubre del 2019: Huelgas, Terrorismo de Estado e
+          Impunidad
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>22-Octubre-2022 - 16h00</p>
+          <h1>Lugar</h1>
+          <p>Fondo de Cesantía UNE</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Frente de defensa del IESS del 15 de noviembre de 1922</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview rojo" data-target="p-26">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Dialogo Virtual “Análisis Histórico del 15N Apellidos de la Represión”
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>03-Noviembre-2022 y 10-Noviembre-2022</p>
+          <h1>Lugar</h1>
+          <p>Virtual</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Fundación Terranueva</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview rojo" data-target="p-27">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Festival cultural 15 de noviembre Reconocimiento a ORG. Gremiales
+          históricas que estuvieron en la gesta del 15 noviembre de 1922
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>15-Noviembre-2022</p>
+          <h1>Lugar</h1>
+          <p>Lugar aún por definir</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Coordinadora Nacional 15 noviembre</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview rojo" data-target="p-28">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Gran marcha por el centenario del 15 de noviembre de 1922</h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>15-Noviembre-2022</p>
+          <h1>Lugar</h1>
+          <p>Lugar aún por definir</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>Coordinadora Nacional 15 noviembre</p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview rojo" data-target="p-29">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Concentración/ Festival “TOMASA GARCÉS”. Cierre de marcha del 15N,
+          ¡Una gran concentración!
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>16-Noviembre-2022</p>
+          <h1>Lugar</h1>
+          <p>Casa de la Cultura Guayas</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            Ecuador Decide. <br />
+            Coordinadora Organizaciones Sociales del Guayas .
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+
+      <div class="preview rojo" data-target="p-30">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>
+          Presentación artística y Proyección de Film para niñxs: La lluvia
+          meona y la Rebelión de la memoria
+        </h3>
+        <div class="info">
+          <h1>Fecha</h1>
+          <p>16-Noviembre-2022</p>
+          <h1>Lugar</h1>
+          <p>MACC Cine</p>
+          <h1>Colectivo - ORG Propone</h1>
+          <p>
+            CECTV, <br />
+            Fundación Habitar Humano, <br />
+            Semillero de Teatro y <br />
+            Zancos del Noroeste
+          </p>
+        </div>
+        <div class="buttons">
+          <a class="agendar" href="">Agendar</a>
+          <a href=""><small>¿No sabes como agendar?</small></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="../js/preview.js"></script>
+    <script src="../js/grid-changer.js"></script>
+  </body>
+</html>

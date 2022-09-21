@@ -1,0 +1,245 @@
+@import url(../css/global.css);
+@import url(../css/header.css);
+@import url(../css/footer.css);
+header {
+  background-color: transparent;
+}
+body {
+  background-color: black;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+p {
+  color: white;
+}
+.imgSection {
+  height: 700px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.txt {
+  text-align: justify;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.type {
+  visibility: hidden;
+  font-size: 22px;
+  text-align: justify;
+  font-family: monospace;
+  color: #0000;
+  background: linear-gradient(-90deg, white 5px, #0000 0) 10px 0,
+    linear-gradient(white 0 0) 0 0;
+  background-size: calc(var(--n) * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+}
+.toggleAnim {
+  animation: b 0.7s infinite steps(1),
+    t calc(var(--n) * 50ms) steps(var(--n)) forwards,
+    typedelay 0s linear forwards;
+}
+.text-visible {
+  visibility: visible;
+}
+@keyframes typedelay {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@keyframes t {
+  from {
+    background-size: 0 200%;
+  }
+}
+@keyframes b {
+  50% {
+    background-position: 0 -100%, 0 0;
+  }
+}
+
+.portada {
+  height: 61vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 30vh;
+}
+.portada .textContainer {
+  width: 70%;
+}
+.portada .textContainer h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 4.5em;
+}
+.portada .textContainer p {
+  font-family: "Roboto Slab", serif;
+  font-weight: 200;
+}
+.gotoContainer {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portada #goto {
+  font-size: 25px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+.portada #goto:hover {
+  font-size: 30px;
+}
+
+.bg {
+  top: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../public/img/img14.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -2;
+  display: flex;
+  align-items: flex-end;
+}
+.bg .creditos {
+  opacity: 0.5;
+  text-align: left;
+  margin: 20px;
+  width: 20%;
+  font-size: 10px;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .portada {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+  }
+  .portada p {
+    font-size: 12px;
+  }
+  .portada .textContainer {
+    width: auto;
+    margin-bottom: 40px;
+  }
+  .gotoContainer {
+    width: 100%;
+  }
+  .portada #goto {
+    font-size: 10px;
+  }
+  .portada #goto:hover {
+    font-size: 12px;
+  }
+  .bg .creditos {
+    font-size: 8px;
+    width: 80%;
+  }
+  .txt span {
+    font-size: 4vw;
+  }
+  .txt2 span {
+    font-size: 4vw;
+  }
+  section {
+    height: auto;
+  }
+  .imgSection {
+    height: 400px;
+  }
+}
+
+#acerca {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.toggleAnimButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 20px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.toggleAnimButton:hover {
+  transform: scale(1.05);
+}
+.fa-font {
+  transition: all 250ms ease-in-out;
+}
+
+#toggleAnimCheck {
+  display: none;
+}
+#toggleAnimCheck:checked ~ .toggleAnimButton {
+  background-color: var(--rojo);
+}
+
+[data-tooltip] {
+  position: fixed;
+  cursor: pointer;
+}
+[data-tooltip]::after {
+  position: absolute;
+  width: 200px;
+  top: -10px;
+  right: 0;
+  text-align: right;
+  box-sizing: border-box;
+  content: attr(data-tooltip);
+  color: white;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out, right 200ms ease-in-out;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+}
+[data-tooltip]:hover::after {
+  opacity: 1;
+  right: 60px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}

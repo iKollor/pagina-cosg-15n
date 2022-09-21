@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url(../css/transition.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  background-color: #000;
+  overflow-x: hidden;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+:root {
+  --rojo: #cb2228;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 1vw;
+  background: var(--rojo);
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.noise::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.04;
+  z-index: 1000;
+  pointer-events: none;
+  background: url(../public/gif/noise3.gif);
+}

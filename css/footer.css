@@ -1,0 +1,38 @@
+footer {
+  margin: auto;
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  footer {
+    height: 150px;
+  }
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer small,
+footer a {
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 150ms ease;
+}
+
+footer a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.copyright {
+  text-align: left;
+}
+footer small {
+  max-width: 50%;
+  text-align: right;
+}
+
+line {
+  width: 1px;
+  height: 50%;
+  background-color: white;
+}
